@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 from google.oauth2 import service_account
@@ -16,7 +15,7 @@ credenciais = service_account.Credentials.from_service_account_file(
 )
 
 # ID da planilha do Google (extraído da URL)
-sheet_id = "1aUzealEj-M7RVc4XPoVzTkLM7e7UTRvmFusx-BMwLfY"  # Trocar pelo ID da sua planilha real
+sheet_id = "1aUzealEj-M7RVc4XPoVzTkLM7e7UTRvmFusx-BMwLfY"
 gs = gspread.authorize(credenciais)
 sh = gs.open_by_key(sheet_id)
 worksheet = sh.worksheet("Dados")
